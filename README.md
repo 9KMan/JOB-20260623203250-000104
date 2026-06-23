@@ -68,3 +68,19 @@ docker-compose up --build
 # Run migrations
 docker-compose exec web python manage.py migrate
 ```
+
+## UI/UX
+
+This is a **backend-only API project**. No frontend user interface is included in this build.
+
+For API consumption, see the `requirements.txt` for Python client dependencies and `api/` for REST endpoints.
+
+## API Documentation
+
+Interactive API documentation available when running the server at:
+- `/api/v1/` — REST API root
+- `/admin/` — Django admin panel
+
+## Future Work
+
+See `OUT_OF_SCOPE.md` for explicitly deferred features.
