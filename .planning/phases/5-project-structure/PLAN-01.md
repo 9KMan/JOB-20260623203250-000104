@@ -1,64 +1,49 @@
-# Phase 05: Project Structure
+# Phase 5: Project Structure
 
 ## Phase Goal
 Establish the directory layout, module boundaries, and file organization.
 
-## Remaining Files
-Complete any files not yet created:
-- app/services/ (business logic)
-- app/worker/ (background tasks)
-- API routes for all SPEC endpoints
-- Tests (pytest)
-
-## README.md (MANDATORY - byline required)
+## Files to Create
 
 ```file:README.md
-# Project
+# # Senior Backend Developer — Django, AWS, Python
 
 **Built by: KMan | AI-Augmented Engineering Factory**
 
 ## Business Problem Solved
-[Extract business problem from SPEC.md - what pain point does this solve? Who benefits? What is the outcome?]
+[Extract from SPEC.md — what pain point does this solve? Who benefits?]
 
 ## Quick Start
 ```
-pip install -r requirements.txt
+# Install
+pip install -r requirements.txt  # or: npm install
 cp .env.example .env
-# Edit .env with your values
-alembic upgrade head
-uvicorn app.main:app --reload
+
+# Run
+uvicorn app.main:app --reload  # or: npm run dev
 ```
 
 ## Tech Stack
-TypeScript, Node.js, PostgreSQL
+Python, Django, Amazon Web Services, RESTful API, API, PostgreSQL
 
 ## Project Structure
 ```
-app/
-  main.py          # FastAPI app
-  config.py        # Settings
-  database.py      # DB session
-  models/          # SQLAlchemy models
-  schemas/         # Pydantic schemas
-  api/v1/          # API routes
-  services/        # Business logic
-  worker/          # Background tasks
-alembic/           # DB migrations
-tests/             # Unit tests
+# Add project structure here
 ```
 
 ## API Overview
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | GET | /api/v1/health | Health check |
-| POST | /api/v1/auth/register | Register user |
-| POST | /api/v1/auth/login | Login |
 
 ## Environment Variables
 | Variable | Description |
 |----------|-------------|
 | DATABASE_URL | PostgreSQL connection string |
-| JWT_SECRET | Secret for JWT signing |
-| JWT_ALGORITHM | Algorithm (default HS256) |
-| JWT_EXPIRE_MINUTES | Access token expiry |
+| SECRET_KEY | Application secret key |
 ```
+
+## Done When
+- README.md has 'Business Problem Solved' as first section
+- README.md contains byline: '**Built by: KMan | AI-Augmented Engineering Factory**'
+- Quick Start section is runnable without errors

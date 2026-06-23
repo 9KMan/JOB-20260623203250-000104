@@ -1,46 +1,70 @@
-# Phase 02: Technical Stack
+# Phase 2: Technical Stack
 
 ## Phase Goal
-Select and justify the technology stack, frameworks, and tools for the Django Backend API.
+Select and justify the technology stack, frameworks, and tools.
 
 ## Tech Stack
-- **Runtime:** Python 3.11
-- **Framework:** Django 5 + Django REST Framework
-- **Database:** PostgreSQL 15 (RDS)
-- **AI Integration:** LangChain / LangGraph for agent orchestration
-- **Cloud:** AWS (EC2, RDS, Route 53, IAM, Lambda, ECS)
-- **Container:** Docker + docker-compose
-- **Web Server:** Gunicorn + Nginx
-- **Auth:** JWT (djangorestframework-simplejwt)
-- **CI/CD:** GitHub Actions
+Python, Django, Amazon Web Services, RESTful API, API, PostgreSQL
 
-## Dependencies
-```
+## Files to Create
+
+```file:requirements.txt
 Django>=5.0
 djangorestframework>=3.14
 psycopg2-binary
 gunicorn
-celery
+celery>=5.3
 redis
 boto3
-langchain>=0.3
-langgraph
-pydantic
 python-dotenv
-gitleaks
+pytest>=8.0
+
 ```
 
-## Environment Config
-| Variable | Description |
-|---|---|
-| `DATABASE_URL` | PostgreSQL connection string |
-| `AWS_ACCESS_KEY_ID` | AWS credentials |
-| `AWS_SECRET_ACCESS_KEY` | AWS credentials |
-| `SECRET_KEY` | Django secret key |
-| `OPENAI_API_KEY` | LLM API key |
-| `REDIS_URL` | Celery broker |
+```file:.env.example
+DATABASE_URL=postgresql+asyncpg://user:pass@localhost/dbname
+SECRET_KEY=***replace-with-random-secret***
+```
+
+```file:Dockerfile
+FROM python:3.11-slim
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt 2>/dev/null || true
+COPY . .
+EXPOSE 8000
+CMD gunicorn config.wsgi:application --bind 0.0.0.0:8000
+```
+
+```file:docker-compose.yml
+version: '3.9'
+services:
+  api:
+    build: .
+    ports: ['8000:8000']
+    env_file: .env
+    depends_on:
+      postgres:
+        condition: service_healthy
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: appdb
+      POSTGRES_USER: appuser
+      POSTGRES_PASSWORD: apppassword
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U appuser']
+      interval: 5s
+      timeout: 5s
+      retries: 5
+volumes:
+  pgdata:
+```
 
 ## Done When
-- All dependencies documented in requirements.txt
-- Docker setup complete and working
-- AWS configuration documented
+- requirements.txt lists all dependencies
+- .env.example documents all environment variables
+- Dockerfile builds: docker build .
+- docker-compose.yml starts all services: docker compose up

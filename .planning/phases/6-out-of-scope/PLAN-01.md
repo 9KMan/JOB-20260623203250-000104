@@ -1,14 +1,21 @@
-# Phase 06: Out-of-Scope
+# Phase 6: Out-of-Scope
 
 ## Phase Goal
 Explicitly document what is NOT included in this build.
 
-## Explicitly Out of Scope
-Items NOT being built (per SPEC.md):
-- Frontend UI (API-only backend)
-- Mobile applications
-- Marketing/documentation site
-- Third-party integrations not in SPEC
+## Files to Create
+
+```file:OUT_OF_SCOPE.md
+# Out of Scope
+
+The following items are explicitly NOT included in this build:
+
+## Out of Scope
+- [List items from SPEC.md that are explicitly excluded]
+
+## Future Phases
+- [Items that could be addressed in future iterations]
+```
 
 ## Done When
-- Out-of-scope items documented
+- OUT_OF_SCOPE.md exists and documents what's excluded

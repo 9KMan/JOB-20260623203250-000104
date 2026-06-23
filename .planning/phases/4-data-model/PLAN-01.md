@@ -1,14 +1,26 @@
-# Phase 04: Data Model
+# Phase 4: Data Model
 
 ## Phase Goal
 Define the data model, entities, relationships, and storage approach.
 
-## Database Schema
-Define database tables based on SPEC.md data model.
+## Files to Create
 
-## Migrations
-Create migration files for all schema changes.
+```file:api/models.py
+"""Database models."""
+from django.db import models
+
+
+# Create your models here
+```
+
+```file:api/admin.py
+"""Django admin configuration."""
+from django.contrib import admin
+from .models import *
+
+# admin.site.register(ModelName)
+```
 
 ## Done When
-- Schema defined
-- Migrations created and tested
+- python manage.py makemigrations succeeds
+- python manage.py migrate succeeds
