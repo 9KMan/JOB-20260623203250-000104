@@ -4,7 +4,8 @@ You are a senior full-stack engineer. Write ALL source code for this project.
 
 
 ## Files to Create
-(determine from SPEC)
+- ```file:api/models.py
+- ```file:api/admin.py
 
 ## SPEC.md (read carefully)
 # Senior Backend Developer — Django, AWS, Python

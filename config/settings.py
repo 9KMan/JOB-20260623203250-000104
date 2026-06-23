@@ -1,5 +1,3 @@
-python
-// config/settings.py
 """Django settings."""
 import os
 from pathlib import Path
@@ -17,6 +15,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'api',
 ]
 
 MIDDLEWARE = [

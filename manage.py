@@ -1,5 +1,3 @@
-python
-// manage.py
 #!/usr/bin/env python
 """Django management script."""
 import os
