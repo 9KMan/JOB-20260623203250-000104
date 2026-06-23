@@ -1,0 +1,51 @@
+{
+  "job_id": "JOB-20260623203250-000104",
+  "url": "https://www.upwork.com/jobs/~022069415567809549801",
+  "title": "Senior Backend Developer (Django, AWS, Python)",
+  "budget": "$25-40/hr",
+  "tier": "INTERMEDIATE",
+  "client": "Upwork",
+  "duration": "1-3 months",
+  "hours": "<30 hrs/week",
+  "skills": [
+    "Python",
+    "Django",
+    "Amazon Web Services",
+    "RESTful API",
+    "API",
+    "PostgreSQL"
+  ],
+  "description": "Senior Backend Developer \u2014 Django, AWS, Python. Building backend systems with focus on AI agent development and production-grade automation. Stack: Django, Python, PostgreSQL, AWS (EC2, RDS, Route 53, IAM, Lambda, ECS), Docker, Linux, Nginx, REST APIs, WebSockets, CI/CD. AI agent, prompt orchestration, tool calling, document processing, structured outputs, retrieval systems, LLM-powered applications valued.",
+  "tech_stack": [
+    "Python",
+    "Django",
+    "Amazon Web Services",
+    "RESTful API",
+    "API",
+    "PostgreSQL"
+  ],
+  "created_at": "2026-06-23T20:32:50.056281+00:00",
+  "cto_approved": true,
+  "_version": 9,
+  "github_url": "https://github.com/9KMan/JOB-20260623203250-000104",
+  "github_repo": "9KMan/JOB-20260623203250-000104",
+  "ceo_review_issue_id": "b4bf3167-084c-4928-8962-bb7cb4cf27db",
+  "state": "APPROVED",
+  "updated_at": "2026-06-23T20:33:30.047272+00:00",
+  "retry_count": 0,
+  "history": [],
+  "build_issue_id": null,
+  "confidence": 0.0,
+  "tags": [],
+  "full_description": "Senior Backend Developer \u2014 Django, AWS, Python. Building backend systems with focus on AI agent development and production-grade automation. Stack: Django, Python, PostgreSQL, AWS (EC2, RDS, Route 53, IAM, Lambda, ECS), Docker, Linux, Nginx, REST APIs, WebSockets, CI/CD. AI agent, prompt orchestration, tool calling, document processing, structured outputs, retrieval systems, LLM-powered applications valued.",
+  "lead_url": "",
+  "ceo_verdict": {
+    "verdict": "a",
+    "label": "APPROVED",
+    "confidence": "high",
+    "stored_at": "2026-06-23T20:46:05.264265+00:00"
+  },
+  "assignee": null,
+  "assigned_at": null,
+  "verdict": "A"
+}
